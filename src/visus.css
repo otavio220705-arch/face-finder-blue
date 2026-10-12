@@ -27,3 +27,12 @@ header{background:#050505ed;border-bottom:1px solid #202124}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:36px;gap:15px}.hero-visual{min-height:290px}.hero h1{font-size:clamp(40px,11vw,57px)}.pillars{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.manifesto{align-items:flex-start;flex-direction:column}.nav{height:64px}.wrap{padding:0 16px}.panel{padding:16px}.sectionhead{align-items:flex-start;flex-direction:column}.premiumbox{align-items:flex-start;flex-direction:column}}
 @media(max-width:390px){.pillars{grid-template-columns:1fr}.brand{letter-spacing:.1em}.navright .btn{padding:9px 12px}}
 
+
+/* Adaptação para o projeto web: a sobreposição acompanha exatamente a imagem */
+.photo-frame{position:relative;display:none;line-height:0;max-width:100%}
+.upload.has-image .photo-frame{display:inline-block}
+.photo-frame .preview{display:block}
+.photo-frame .landmark-canvas{top:0;left:0;transform:none}
+.upload.has-image input{z-index:1}
+.btn:disabled{opacity:.6;cursor:progress;transform:none}
+.toast.error{background:#2a1416;border-color:#6b2f36;color:#ffc9cf}

@@ -1,4 +1,6 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss/theme.css" layer(theme) source(none);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@import "./visus.css";
 @source "../src";
 @import "tw-animate-css";
 
