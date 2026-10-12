@@ -76,7 +76,7 @@ export function setupVisusPage() {
     $("landmarkStatus").textContent = "Os pontos detectados aparecerão sobre a foto após a análise.";
   }
   function drawLandmarks(points: NormalizedLandmark[]) {
-    const w = img.clientWidth, h = img.clientHeight;
+    const { width: w, height: h } = img.getBoundingClientRect();
     if (!w || !h) return;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = Math.round(w * dpr);
