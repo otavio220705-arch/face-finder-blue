@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- The Visus Labs page keeps the original prototype's CSS (src/visus.css) and imperative DOM logic (src/lib/visus-analyzer.ts); Tailwind preflight is disabled so the original styles render unchanged.
