@@ -156,9 +156,9 @@ export function setupVisusPage() {
       const out = landmarker.detect(selectedImage);
       if (!out.faceLandmarks?.length)
         throw new Error("Não consegui detectar um rosto. Tente uma foto frontal, nítida e com boa iluminação.");
-      const p = out.faceLandmarks[0];
+      const p = out.faceLandmarks[0]!;
       const W = selectedImage.naturalWidth, H = selectedImage.naturalHeight;
-      const px = (i: number) => ({ x: p[i].x * W, y: p[i].y * H });
+      const px = (i: number) => ({ x: p[i]!.x * W, y: p[i]!.y * H });
       const left = px(234), right = px(454), top = px(10), chin = px(152), nose = px(1);
       const outerEyeLeft = px(33), outerEyeRight = px(263);
       const width = dist(left, right), height = dist(top, chin);
@@ -172,7 +172,7 @@ export function setupVisusPage() {
       const pairs = [[234, 454], [93, 323], [132, 361], [58, 288], [172, 397], [127, 356], [136, 365], [150, 379], [176, 400]];
       const bilateralMismatch = avg(
         pairs.map(([a, b]) => {
-          const A = px(a), B = px(b);
+          const A = px(a!), B = px(b!);
           return (Math.hypot(2 * midX - A.x - B.x, A.y - B.y) / width) * 100;
         }),
       );
