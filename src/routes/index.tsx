@@ -32,9 +32,7 @@ function Index() {
           <div>
             <div className="eyebrow">ANÁLISE FACIAL · VISUS LABS</div>
             <h1>
-              Seu rosto.
-              <br />
-              <span>Em perspectiva.</span>
+              Título de teste
             </h1>
             <p>
               Decompomos o rosto em dezenas de medidas geométricas, cada uma com faixa de referência,
