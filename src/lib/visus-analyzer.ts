@@ -46,12 +46,6 @@ export function setupVisusPage() {
   let lastPoints: NormalizedLandmark[] | null = null;
   let busy = false;
 
-  const scrollTo = (id: string) => () => $(id).scrollIntoView({ behavior: "smooth", block: "start" });
-  $("scrollUpload").onclick = $("startBtn").onclick = scrollTo("analyzer");
-  $("scrollUploadSecondary").onclick = scrollTo("analyzer");
-  $("howBtn").onclick = scrollTo("how");
-  $("premiumBtn").onclick = () =>
-    alert("Os recursos avançados da Visus Labs ainda estão em desenvolvimento. Esta versão não processa pagamentos.");
 
   const dz = $("dropzone");
   const input = $<HTMLInputElement>("file");
