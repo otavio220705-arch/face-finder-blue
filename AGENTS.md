@@ -9,3 +9,4 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 - The Visus Labs page keeps the original prototype's CSS (src/visus.css) and imperative DOM logic (src/lib/visus-analyzer.ts); Tailwind preflight is disabled so the original styles render unchanged.
+- Signed-in pages live under src/routes/_authenticated/ (client-only gate redirecting to /auth); public pages stay top-level so they remain shareable.
