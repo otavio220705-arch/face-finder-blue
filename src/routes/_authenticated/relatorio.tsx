@@ -26,7 +26,7 @@ function Relatorio() {
   return (
     <>
       <SiteHeader />
-      <main className="wrap">
+      <main className="wrap report-page">
         <div className="sectionhead">
           <div>
             <h2>Seus relatórios</h2>
