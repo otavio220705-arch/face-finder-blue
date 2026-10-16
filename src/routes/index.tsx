@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteFooter, SiteHeader } from "@/components/SiteHeader";
 import { useAuth } from "@/hooks/use-auth";
+import classicalStudy from "@/assets/classical-study.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,10 +28,13 @@ function Index() {
   return (
     <>
       <SiteHeader />
-      <main className="wrap">
-        <section className="hero">
-          <div>
+      <main className="home-page">
+        <section className="hero home-hero">
+          <img className="hero-art" src={classicalStudy} alt="Étude sculpturale d’un visage classique en marbre, éclairé en clair-obscur" width={1920} height={1280} fetchPriority="high" />
+          <div className="wrap hero-inner">
+          <div className="hero-copy">
             <div className="eyebrow">ANÁLISE FACIAL · VISUS LABS</div>
+            <div className="hero-brand">Visus Labs<span aria-hidden="true">®</span></div>
             <h1>
               Entenda a estrutura do seu rosto.
             </h1>
@@ -46,13 +50,13 @@ function Index() {
             </div>
             <div className="note">Estimativas 2D não definem beleza, saúde ou valor pessoal.</div>
           </div>
-          <div className="hero-visual">
-            <div className="float f1">MÉTRICAS<b>34 medidas frontais</b></div>
-            <div className="orb"><div className="faceicon">◎</div></div>
-            <div className="float f2">VISUS ENGINE<b>6 níveis por medida</b></div>
+          <div className="hero-annotations">
+            <div>MÉTRICAS<b>34 medidas frontais</b></div>
+            <div>VISUS ENGINE<b>6 níveis por medida</b></div>
+          </div>
           </div>
         </section>
-
+        <div className="wrap home-content">
         <div className="sectionhead">
           <div>
             <h2>Quatro pilares, avaliados separadamente</h2>
@@ -89,6 +93,7 @@ function Index() {
           <div className="feature"><div className="ico">◈</div><h3>Foto processada no navegador</h3><p>A detecção de pontos faciais roda no seu dispositivo.</p></div>
           <div className="feature"><div className="ico">↗</div><h3>Histórico na sua conta</h3><p>Seus laudos ficam guardados para comparar ao longo do tempo.</p></div>
         </section>
+        </div>
       </main>
       <SiteFooter />
     </>

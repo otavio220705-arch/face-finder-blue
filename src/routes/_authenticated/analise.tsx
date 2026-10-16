@@ -22,7 +22,7 @@ function Analise() {
   return (
     <>
       <SiteHeader />
-      <main className="wrap">
+      <main className="wrap analysis-page">
         <div className="sectionhead">
           <div>
             <h2>Nova análise</h2>

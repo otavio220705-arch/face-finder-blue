@@ -28,8 +28,8 @@ function Metodologia() {
   return (
     <>
       <SiteHeader />
-      <main className="wrap">
-        <section className="hero" style={{ gridTemplateColumns: "1fr" }}>
+      <main className="wrap methodology-page">
+        <section className="hero editorial-heading">
           <div>
             <div className="eyebrow">METODOLOGIA</div>
             <h1>Transparência <span>em cada número.</span></h1>

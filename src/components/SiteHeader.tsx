@@ -12,9 +12,9 @@ export function SiteHeader() {
   return (
     <header>
       <div className="wrap nav">
-        <Link to="/" className="brand" style={{ color: "inherit", textDecoration: "none" }}>
+        <Link to="/" className="brand">
           <span className="mark">V</span> VISUS{" "}
-          <span style={{ fontSize: 10, color: "#a2a8b1", fontWeight: 650, letterSpacing: ".16em" }}>LABS</span>
+          <span className="brand-labs">LABS</span>
         </Link>
         <nav className="navlinks">
           <Link to="/analise" activeProps={{ className: "active" }}>Análise</Link>
