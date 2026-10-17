@@ -30,11 +30,11 @@ function Index() {
       <SiteHeader />
       <main className="home-page">
         <section className="hero home-hero">
-          <img className="hero-art" src={classicalStudy} alt="Étude sculpturale d’un visage classique en marbre, éclairé en clair-obscur" width={1920} height={1280} fetchPriority="high" />
+          <img className="hero-art" src={classicalStudy} alt="Estudo de um rosto esculpido em mármore sob luz e sombra" width={1920} height={1280} fetchPriority="high" />
           <div className="wrap hero-inner">
           <div className="hero-copy">
             <div className="eyebrow">ANÁLISE FACIAL · VISUS LABS</div>
-            <div className="hero-brand">Visus Labs<span aria-hidden="true">®</span></div>
+            <div className="hero-brand">Visus Labs</div>
             <h1>
               Entenda a estrutura do seu rosto.
             </h1>

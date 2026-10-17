@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -73,22 +74,22 @@ function AuthPage() {
           <div className="eyebrow">{mode === "in" ? "BEM-VINDO DE VOLTA" : "CRIAR CONTA"}</div>
           <h2 style={{ margin: "10px 0 6px" }}>{mode === "in" ? "Entrar na Visus Labs" : "Comece sua análise"}</h2>
           <p className="muted" style={{ fontSize: 13, marginTop: 0 }}>Seus laudos e histórico ficam salvos na sua conta.</p>
-          <button className="btn full social" onClick={() => social("google")}>Continuar com Google</button>
-          <button className="btn full social" onClick={() => social("apple")}>Continuar com Apple</button>
+          <Button variant="visus" className="btn full social" onClick={() => social("google")}>Continuar com Google</Button>
+          <Button variant="visus" className="btn full social" onClick={() => social("apple")}>Continuar com Apple</Button>
           <div className="divider"><span>ou com e-mail</span></div>
           <form onSubmit={submit} className="authform">
             <input type="email" required placeholder="seu@email.com" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="E-mail" />
             <input type="password" required minLength={6} placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} aria-label="Senha" />
-            <button className="btn primary full" disabled={busy}>
+            <Button variant="visus" className="btn primary full" disabled={busy}>
               {busy ? "Aguarde…" : mode === "in" ? "Entrar" : "Criar conta"}
-            </button>
+            </Button>
           </form>
           {msg && <div className={"toast" + (msg.error ? " error" : "")} style={{ display: "block" }}>{msg.text}</div>}
           <p className="muted" style={{ fontSize: 13, textAlign: "center" }}>
             {mode === "in" ? "Ainda não tem conta? " : "Já tem conta? "}
-            <button type="button" className="linkbtn" onClick={() => { setMode(mode === "in" ? "up" : "in"); setMsg(null); }}>
+            <Button variant="visus" type="button" className="linkbtn" onClick={() => { setMode(mode === "in" ? "up" : "in"); setMsg(null); }}>
               {mode === "in" ? "Criar conta" : "Entrar"}
-            </button>
+            </Button>
           </p>
         </div>
       </main>

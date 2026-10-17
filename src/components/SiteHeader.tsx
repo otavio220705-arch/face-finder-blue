@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/use-auth";
@@ -25,7 +26,7 @@ export function SiteHeader() {
           {ready && user ? (
             <>
               <span className="tag userTag" title={user.email ?? ""}>{user.email}</span>
-              <button className="btn" onClick={signOut}>Sair</button>
+              <Button variant="visus" className="btn" onClick={signOut}>Sair</Button>
             </>
           ) : (
             <Link to="/auth" className="btn primary" style={{ textDecoration: "none" }}>Entrar</Link>

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { setupVisusPage } from "@/lib/visus-analyzer";
@@ -53,7 +54,7 @@ function Analise() {
               <span className="check">Sem filtros</span>
               <span className="check">Frontal</span>
             </div>
-            <button className="btn primary full" id="analyzeBtn">Executar análise básica</button>
+            <Button variant="visus" className="btn primary full" id="analyzeBtn">Executar análise básica</Button>
             <div className="toast" id="toast" role="status" aria-live="polite" />
             <p className="note">
               A análise calcula referências geométricas aproximadas a partir de pontos detectados no
